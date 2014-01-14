@@ -7,16 +7,21 @@ import flash.display.Sprite;
  */
 class SceneDirector extends Manager<Scene>
 {
+	public var game: Game;
 
-	public function new(parent: Sprite) 
+	public function new(parent: Sprite, ?game: Game) 
 	{
 		super();
+		this.game = game;
 		
 		events.on('add', function(item) {
 			var displayObject = item.value;
 			
 			parent.addChild(displayObject);
 			displayObject.visible = false;
+			if (this.game != null) {
+				item.game = this.game;
+			}
 		} );
 	}
 	
