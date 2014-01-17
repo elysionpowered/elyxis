@@ -1,10 +1,10 @@
-package elyssa;
+package elyxis;
 
 /**
  * ...
  * @author ...
  */
-class ComponentManager extends Manager<Component>
+class DataModelManager extends Manager<DataModel>
 {
 
 	public function new() 

@@ -1,4 +1,4 @@
-package elyssa.types;
+package elyxis.types;
 
 /**
  * ...

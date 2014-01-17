@@ -1,10 +1,10 @@
-package elyssa;
+package elyxis;
 
 /**
  * ...
  * @author ...
  */
-class Layer extends Entity
+class Layer extends GameObject
 {
 
 	public function new() 

@@ -1,9 +1,9 @@
 package;
 
 
-import elyssa.Entity;
-import elyssa.EntityManager;
-import elyssa.Game;
+import elyxis.GameObject;
+import elyxis.GameObjectManager;
+import elyxis.Game;
 import flash.display.Bitmap;
 import flash.display.BitmapData;
 import flash.display.Sprite;
@@ -24,10 +24,10 @@ class Main extends Game {
 		bitmap.x = (stage.stageWidth - bitmap.width) / 2;
 		bitmap.y = (stage.stageHeight - bitmap.height) / 2;
 		
-		var sprite = new Entity();
+		var sprite = new GameObject();
 		trace(sprite.name);
 		
-		var eman = new EntityManager();
+		var eman = new GameObjectManager();
 		
 	}
 	

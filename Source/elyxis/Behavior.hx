@@ -1,4 +1,4 @@
-package elyssa;
+package elyxis;
 
 import freezedev.EventMap;
 
@@ -6,20 +6,20 @@ import freezedev.EventMap;
  * ...
  * @author ...
  */
-class Component
+class Behavior
 {
-	public var children: ComponentManager;
+	public var children: BehaviorManager;
 	public var events: EventMap;
 	public var name: String;
 	
 	public function new(?name: String) 
 	{
 		if (name == null) {
-			name = Type.getClassName(Entity) + '-' + Date.now().getTime();
+			name = Type.getClassName(GameObject) + '-' + Date.now().getTime();
 		}
 		this.name = name;
 		
-		children = new ComponentManager();
+		children = new BehaviorManager();
 		events = new EventMap();
 	}
 	

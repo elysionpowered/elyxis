@@ -1,5 +1,5 @@
-package elyssa;
-import elyssa.types.Size;
+package elyxis;
+import elyxis.types.Size;
 import flash.display.Sprite;
 
 /**

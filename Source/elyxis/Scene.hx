@@ -1,10 +1,10 @@
-package elyssa;
+package elyxis;
 
 /**
  * ...
  * @author ...
  */
-class Scene extends Entity
+class Scene extends GameObject
 {
 	public var game: Game;
 	public var guiLayer: Layer;

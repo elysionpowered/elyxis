@@ -1,4 +1,4 @@
-package elyssa;
+package elyxis;
 
 import freezedev.EventMap;
 

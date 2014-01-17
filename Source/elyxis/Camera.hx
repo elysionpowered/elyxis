@@ -1,4 +1,4 @@
-package elyssa;
+package elyxis;
 import flash.display.Sprite;
 
 /**

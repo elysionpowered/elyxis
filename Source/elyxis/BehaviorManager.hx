@@ -1,10 +1,10 @@
-package elyssa;
+package elyxis;
 
 /**
  * ...
  * @author ...
  */
-class EntityManager extends Manager<Entity>
+class BehaviorManager extends Manager<Behavior>
 {
 
 	public function new() 
