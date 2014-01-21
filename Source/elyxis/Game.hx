@@ -9,7 +9,7 @@ import flash.display.Sprite;
 class Game extends Sprite
 {
 	public var director: SceneDirector;
-	public var camera: Camera;
+	public var viewport: Viewport;
 	public var screen(get, never): Size;
 	
 	function get_screen() {
@@ -22,9 +22,9 @@ class Game extends Sprite
 		super();
 		
 		camera = new Camera();
-		this.addChild(camera);
+		this.addChild(viewport);
 		
-		director = new SceneDirector(camera, this);
+		director = new SceneDirector(viewport, this);
 	}
 	
 }
