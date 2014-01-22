@@ -21,7 +21,7 @@ class Game extends Sprite
 	{
 		super();
 		
-		camera = new Camera();
+		viewport = new Viewport();
 		this.addChild(viewport);
 		
 		director = new SceneDirector(viewport, this);
