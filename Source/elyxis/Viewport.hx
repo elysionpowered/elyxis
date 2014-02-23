@@ -7,10 +7,18 @@ import flash.display.Sprite;
  */
 class Viewport extends Sprite
 {
-
+	private var behaviors: BehaviorManager;
+	
 	public function new() 
 	{
 		super();
+		
+		behaviors = new BehaviorManager();
+	}
+	
+	public function addBehavior(behavior: Behavior)
+	{
+		
 	}
 	
 }
