@@ -23,6 +23,11 @@ class Behavior
 		events = new EventMap();
 	}
 	
+	public function add(behavior: Behavior)
+	{
+		children.add(behavior.name, behavior);
+	}
+	
 	public function update(doubleTime: Float)
 	{
 		events.trigger('update', doubleTime);
