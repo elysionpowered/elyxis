@@ -28,7 +28,6 @@ class Main extends Game {
 		trace(sprite.name);
 		
 		var eman = new GameObjectManager();
-		
 	}
 	
 	
