@@ -8,11 +8,19 @@ import flash.display.Sprite;
 class SceneDirector extends Manager<Scene>
 {
 	public var game: Game;
+	
+	private var mCurrentScene: Scene;
+	public var currentScene(get, never): Scene;
+	
+	function get_currentScene() {
+		return mCurrentScene;
+	}
 
 	public function new(parent: Sprite, ?game: Game) 
 	{
 		super();
 		this.game = game;
+		mCurrentScene = null;
 		
 		events.on('add', function(item) {
 			var displayObject = item.value;
@@ -32,7 +40,8 @@ class SceneDirector extends Manager<Scene>
 				i.visible = false;
 			}
 			
-			items.get(name).visible = true;
+			mCurrentScene = items.get(name);
+			mCurrentScene.visible = true;
 		}
 	}
 	
