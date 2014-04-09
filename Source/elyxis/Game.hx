@@ -32,7 +32,7 @@ class Game extends Sprite
 		director = new SceneDirector(viewport, this);
 		
 		this.addEventListener(Event.ENTER_FRAME, function(e) {
-			var delta = Lib.getTimer() - lastTick;
+			var delta = (Lib.getTimer() - lastTick) / 1000;
 			update(delta);
 			lastTick = Lib.getTimer();
 		});
