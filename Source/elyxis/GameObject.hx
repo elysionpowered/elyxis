@@ -23,6 +23,7 @@ class GameObject extends Sprite
 		}
 		this.name = name;
 		
+		events = new EventMap();
 		children = new GameObjectManager();
 		behaviors = new BehaviorManager();
 		data = new DataModelManager();
@@ -30,12 +31,14 @@ class GameObject extends Sprite
 	
 	public function addBehavior(behavior: Behavior)
 	{
+		behavior.gameObject = this;
 		behaviors.add(behavior.name, behavior);
 	}
 	
 	public function addGameObject(gameObject: GameObject)
 	{
 		children.add(gameObject.name, gameObject);
+		addChild(gameObject);
 	}
 	
 	public function addData(d: DataModel)
