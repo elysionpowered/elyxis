@@ -39,5 +39,4 @@ class Behavior
 			child.update(doubleTime);
 		}
 	}
-	
 }

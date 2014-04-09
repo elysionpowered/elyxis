@@ -20,6 +20,10 @@ class TestGameObject extends GameObject
 		addGameObject(image);
 		
 		addBehavior(new TestBehavior());
+		
+		this.events.on('click', function(val) {
+			trace('oy');
+		});
 	}
 	
 }
