@@ -1,4 +1,5 @@
 package ;
+import elyxis.GameObject;
 import elyxis.Scene;
 import elyxis.Image;
 import openfl.Assets;
@@ -14,10 +15,9 @@ class TestScene extends Scene
 	{
 		super();
 		
-		var image = new Image();
-		image.bitmapData = Assets.getBitmapData ("assets/openfl.png");
+		var myThing = new TestGameObject();
 		
-		addChild (image);
+		addGameObject(myThing);
 		
 		//image.x = (stage.stageWidth - image.width) / 2;
 		//image.y = (stage.stageHeight - image.height) / 2;
