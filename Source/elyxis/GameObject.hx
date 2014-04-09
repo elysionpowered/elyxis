@@ -1,5 +1,6 @@
 package elyxis;
 import flash.display.Sprite;
+import flash.events.MouseEvent;
 import freezedev.EventMap;
 
 /**
@@ -27,6 +28,8 @@ class GameObject extends Sprite
 		children = new GameObjectManager();
 		behaviors = new BehaviorManager();
 		data = new DataModelManager();
+		
+		this.addEventListener(MouseEvent.CLICK, function(event) { events.trigger('click', event); });
 	}
 	
 	public function addBehavior(behavior: Behavior)
